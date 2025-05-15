@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-05-15T14:59:33.294961" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Google" source="D:\RobotFramework-Practice\Tests\Test_Google.robot">
+<test id="s1-t1" name="Search selenium in google - valid" line="4">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-05-15T14:59:33.504266" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000019F5B955550&gt;</msg>
+<var>${chrome_options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-05-15T14:59:33.504032" elapsed="0.000290"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--user-data-dir\=C:\\Users\\public\\AppData\\Local\\Google\\Chrome\\User Data</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-05-15T14:59:33.504518" elapsed="0.000130"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--profile-directory\=Default</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-05-15T14:59:33.504878" elapsed="0.000106"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:59:33.505341" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
+<arg>https://www.google.com</arg>
+<arg>chrome</arg>
+<arg>options=${chrome_options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-15T14:59:33.505182" elapsed="4.512434"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-15T14:59:38.018249" elapsed="0.010263"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:59:38.029331" level="INFO">Typing text 'selenium' into text field 'name=q'.</msg>
+<arg>name=q</arg>
+<arg>selenium</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-15T14:59:38.028941" elapsed="0.114584"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:59:38.144758" level="INFO">Sending key(s) ('ENTER',) to name=q element.</msg>
+<msg time="2025-05-15T14:59:38.457745" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2025-05-15T14:59:38.457910" level="INFO">Releasing special key ENTER.</msg>
+<arg>name=q</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-05-15T14:59:38.144165" elapsed="1.839721"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:59:40.004218" level="INFO">Current page contains text 'selenium'.</msg>
+<arg>selenium</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-15T14:59:39.984408" elapsed="0.020019"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-15T14:59:40.005159" elapsed="2.337854"/>
+</kw>
+<status status="PASS" start="2025-05-15T14:59:33.503184" elapsed="8.840728"/>
+</test>
+<test id="s1-t2" name="Search Robot in google - valid" line="14">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-05-15T14:59:42.345881" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000019F5B8D7C50&gt;</msg>
+<var>${chrome_options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-05-15T14:59:42.345490" elapsed="0.000435"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--user-data-dir\=C:\\Users\\public\\AppData\\Local\\Google\\Chrome\\User Data</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-05-15T14:59:42.346162" elapsed="0.000198"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--profile-directory\=Default</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-05-15T14:59:42.346547" elapsed="0.000183"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:59:42.347248" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
+<arg>https://www.google.com</arg>
+<arg>chrome</arg>
+<arg>options=${chrome_options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-15T14:59:42.346928" elapsed="2.865205"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-15T14:59:45.216816" elapsed="0.004792"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:59:45.222443" level="INFO">Typing text 'Robot' into text field 'name=q'.</msg>
+<arg>name=q</arg>
+<arg>Robot</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-15T14:59:45.222077" elapsed="0.143751"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:59:45.366851" level="INFO">Sending key(s) ('ENTER',) to name=q element.</msg>
+<msg time="2025-05-15T14:59:45.648007" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2025-05-15T14:59:45.648095" level="INFO">Releasing special key ENTER.</msg>
+<arg>name=q</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-05-15T14:59:45.366341" elapsed="0.498598"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-15T14:59:47.269373" level="INFO">Current page contains text 'Robot'.</msg>
+<arg>Robot</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-15T14:59:45.865760" elapsed="1.403776"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-15T14:59:47.269931" elapsed="2.233778"/>
+</kw>
+<status status="PASS" start="2025-05-15T14:59:42.344869" elapsed="7.160478"/>
+</test>
+<status status="PASS" start="2025-05-15T14:59:33.295989" elapsed="16.211827"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test Google" id="s1" pass="2" fail="0" skip="0">Test Google</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
